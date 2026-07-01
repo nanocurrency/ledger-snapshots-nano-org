@@ -3,13 +3,14 @@
   <channel>
     <title>Nano Ledger Snapshots</title>
     <link>https://ledger-snapshots.nano.org/</link>
-    <description>Torrent releases of Nano ledger snapshots. Subscribe in a torrent client with built-in RSS auto-download to automatically fetch and seed each new snapshot.</description>
+    <description>Test feed generation.</description>
     <language>en-us</language>
-    <!-- Rewritten in full by snapshot.py's publish_listing() (snap-gni.18)
-         each snapshot cycle, generated from data.json, not hand-edited.
-         One item per entry in data.json, newest first. Uses the
-         podcast-style enclosure convention (type=application/x-bittorrent)
-         rather than relying solely on a magnet link in the description, for
-         the broadest torrent-client RSS-downloader compatibility. -->
+    <item>
+      <title>Nano_64_TEST_1.7z</title>
+      <link>https://ledger-snapshots.nano.org/Nano_64_TEST_1.7z.torrent</link>
+      <guid isPermaLink="false">Nano_64_TEST_1.7z</guid>
+      <pubDate>Wed, 01 Jul 2026 22:20:22 GMT</pubDate>
+      <enclosure url="https://ledger-snapshots.nano.org/Nano_64_TEST_1.7z.torrent" length="5000001" type="application/x-bittorrent" />
+    </item>
   </channel>
 </rss>
