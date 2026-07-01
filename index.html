@@ -4,9 +4,52 @@
   <meta charset="utf-8">
   <title>Nano Ledger Snapshots</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="Nano Ledger Snapshots" href="feed.xml">
+  <style>
+    body { font-family: sans-serif; max-width: 60em; margin: 2em auto; padding: 0 1em; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { text-align: left; padding: 0.4em 0.6em; border-bottom: 1px solid #ddd; }
+    code { font-size: 0.9em; }
+  </style>
 </head>
 <body>
   <h1>Nano Ledger Snapshots</h1>
-  <p>Content coming soon.</p>
+  <p>
+    Torrents of Nano ledger snapshots, seeded from the live-network node
+    that produces them. <a href="feed.xml">RSS feed</a> available for
+    torrent clients with built-in auto-download to seed every new snapshot
+    automatically.
+  </p>
+
+  <h2>Currently seeded</h2>
+  <div id="snapshots">Loading&hellip;</div>
+
+  <script>
+    fetch('data.json')
+      .then(r => r.json())
+      .then(d => {
+        const el = document.getElementById('snapshots');
+        if (!d.snapshots || d.snapshots.length === 0) {
+          el.textContent = 'No snapshots published yet.';
+          return;
+        }
+        const rows = d.snapshots.map(s => `
+          <tr>
+            <td>${s.name}</td>
+            <td>${s.created_utc}</td>
+            <td>${(s.size_bytes / 1e9).toFixed(1)} GB</td>
+            <td><a href="${s.torrent_url}">.torrent</a></td>
+            <td><a href="${s.magnet}">magnet</a></td>
+          </tr>`).join('');
+        el.innerHTML = `
+          <table>
+            <thead><tr><th>Name</th><th>Created (UTC)</th><th>Size</th><th></th><th></th></tr></thead>
+            <tbody>${rows}</tbody>
+          </table>`;
+      })
+      .catch(() => {
+        document.getElementById('snapshots').textContent = 'Could not load snapshot list.';
+      });
+  </script>
 </body>
 </html>
