@@ -6,18 +6,18 @@
     <description>Test feed generation.</description>
     <language>en-us</language>
     <item>
+      <title>Nano_64_TEST_3.7z</title>
+      <link>https://ledger-snapshots.nano.org/Nano_64_TEST_3.7z.torrent</link>
+      <guid isPermaLink="false">Nano_64_TEST_3.7z</guid>
+      <pubDate>Wed, 01 Jul 2026 22:20:25 GMT</pubDate>
+      <enclosure url="https://ledger-snapshots.nano.org/Nano_64_TEST_3.7z.torrent" length="5000003" type="application/x-bittorrent" />
+    </item>
+    <item>
       <title>Nano_64_TEST_2.7z</title>
       <link>https://ledger-snapshots.nano.org/Nano_64_TEST_2.7z.torrent</link>
       <guid isPermaLink="false">Nano_64_TEST_2.7z</guid>
       <pubDate>Wed, 01 Jul 2026 22:20:24 GMT</pubDate>
       <enclosure url="https://ledger-snapshots.nano.org/Nano_64_TEST_2.7z.torrent" length="5000002" type="application/x-bittorrent" />
-    </item>
-    <item>
-      <title>Nano_64_TEST_1.7z</title>
-      <link>https://ledger-snapshots.nano.org/Nano_64_TEST_1.7z.torrent</link>
-      <guid isPermaLink="false">Nano_64_TEST_1.7z</guid>
-      <pubDate>Wed, 01 Jul 2026 22:20:22 GMT</pubDate>
-      <enclosure url="https://ledger-snapshots.nano.org/Nano_64_TEST_1.7z.torrent" length="5000001" type="application/x-bittorrent" />
     </item>
   </channel>
 </rss>
