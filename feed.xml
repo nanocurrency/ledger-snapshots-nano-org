@@ -3,21 +3,21 @@
   <channel>
     <title>Nano Ledger Snapshots</title>
     <link>https://ledger-snapshots.nano.org/</link>
-    <description>Test feed generation.</description>
+    <description>Torrent releases of Nano ledger snapshots. Subscribe in a torrent client with built-in RSS auto-download to automatically fetch and seed each new snapshot.</description>
     <language>en-us</language>
+    <item>
+      <title>Nano_64_2026_07_02_20.7z</title>
+      <link>https://ledger-snapshots.nano.org/Nano_64_2026_07_02_20.7z.torrent</link>
+      <guid isPermaLink="false">Nano_64_2026_07_02_20.7z</guid>
+      <pubDate>Thu, 02 Jul 2026 20:12:57 GMT</pubDate>
+      <enclosure url="https://ledger-snapshots.nano.org/Nano_64_2026_07_02_20.7z.torrent" length="617977094" type="application/x-bittorrent" />
+    </item>
     <item>
       <title>Nano_64_TEST_3.7z</title>
       <link>https://ledger-snapshots.nano.org/Nano_64_TEST_3.7z.torrent</link>
       <guid isPermaLink="false">Nano_64_TEST_3.7z</guid>
       <pubDate>Wed, 01 Jul 2026 22:20:25 GMT</pubDate>
       <enclosure url="https://ledger-snapshots.nano.org/Nano_64_TEST_3.7z.torrent" length="5000003" type="application/x-bittorrent" />
-    </item>
-    <item>
-      <title>Nano_64_TEST_2.7z</title>
-      <link>https://ledger-snapshots.nano.org/Nano_64_TEST_2.7z.torrent</link>
-      <guid isPermaLink="false">Nano_64_TEST_2.7z</guid>
-      <pubDate>Wed, 01 Jul 2026 22:20:24 GMT</pubDate>
-      <enclosure url="https://ledger-snapshots.nano.org/Nano_64_TEST_2.7z.torrent" length="5000002" type="application/x-bittorrent" />
     </item>
   </channel>
 </rss>

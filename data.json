@@ -1,7 +1,19 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-07-01T22:20:25Z",
+  "updated_utc": "2026-07-02T20:12:57Z",
   "snapshots": [
+    {
+      "name": "Nano_64_2026_07_02_20.7z",
+      "created_utc": "2026-07-02T20:12:57Z",
+      "block_count": "Block count: 2454857",
+      "cemented_block_count": "Cemented block count: 2454742",
+      "size_bytes": 617977094,
+      "sha256": "E6B303A2A690AEEEFD4A833CAC9C4FB4338918E70167928431B621D33E1A0CA0",
+      "sha3_512": "7F46A11DA41768857710E55E1C5B4EF0CEB3BA5D4EADB9AED28B0412FD2823AC12780E035D3F44DD5683D31E800B8D8C53DD6D56B76C73D7E7F3C7CE20C05030",
+      "blake2b_512": "1375A738440C6DCF779D20A1BA832CC69F07B724D00BD3D6E89D6A83929345855AF5763318F3E8699B7DD71A7751A7E0B53F1626C035D6951C19C68E16D94F07",
+      "torrent_url": "Nano_64_2026_07_02_20.7z.torrent",
+      "magnet": "magnet:?xt=urn:btih:dc91aea0e4237c76c8c390e9ab38c23a9a349610&dn=Nano_64_2026_07_02_20.7z&tr=udp%3A//tracker.opentrackr.org%3A1337/announce&tr=udp%3A//tracker.openbittorrent.com%3A6969/announce"
+    },
     {
       "name": "Nano_64_TEST_3.7z",
       "created_utc": "2026-07-01T22:20:25Z",
@@ -13,18 +25,6 @@
       "blake2b_512": "BLAKE2_3",
       "torrent_url": "Nano_64_TEST_3.7z.torrent",
       "magnet": "magnet:?xt=urn:btih:deadbeef00000000000000000000000000000003&dn=Nano_64_TEST_3.7z&tr=udp%3A//tracker.opentrackr.org%3A1337/announce&tr=udp%3A//tracker.openbittorrent.com%3A6969/announce"
-    },
-    {
-      "name": "Nano_64_TEST_2.7z",
-      "created_utc": "2026-07-01T22:20:24Z",
-      "block_count": 1002,
-      "cemented_block_count": 1001,
-      "size_bytes": 5000002,
-      "sha256": "SHA256_2",
-      "sha3_512": "SHA3_2",
-      "blake2b_512": "BLAKE2_2",
-      "torrent_url": "Nano_64_TEST_2.7z.torrent",
-      "magnet": "magnet:?xt=urn:btih:deadbeef00000000000000000000000000000002&dn=Nano_64_TEST_2.7z&tr=udp%3A//tracker.opentrackr.org%3A1337/announce&tr=udp%3A//tracker.openbittorrent.com%3A6969/announce"
     }
   ]
 }
