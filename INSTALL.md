@@ -55,12 +55,34 @@ credentials and deploy-key paths in here should never be committed.
 
 ## 3. Set the domain
 
-Edit `CNAME` to the operator's own domain (e.g. `ledger-snapshots.example.org`).
-Point that domain's DNS at GitHub Pages (a `CNAME` record to
+Edit `CNAME` to the operator's own domain (e.g. `ledger-snapshots.example.org`)
+and commit it. Point that domain's DNS at GitHub Pages (a `CNAME` record to
 `<their-username-or-org>.github.io`) — this is the operator's own DNS
 provider, outside this repo's scope. Enable GitHub Pages on this repo
-(Settings → Pages → deploy from the branch this pipeline pushes to) and
-set the custom domain there too.
+(Settings → Pages → deploy from the branch this pipeline pushes to).
+
+Committing the `CNAME` file is enough for GitHub Pages to *serve* the
+domain, but it does **not** reliably trigger certificate issuance for it
+-- that only fires on an explicit domain-set through the Pages API (or
+the Settings UI's "Custom domain" field). Do that explicitly as its own
+step, don't rely on the committed file alone:
+
+```
+gh api -X PUT repos/<owner>/<repo>/pages -f cname='<your-domain>'
+```
+
+Confirm it actually started provisioning before moving on --
+`https_certificate` should appear in the response (not be missing
+entirely) with `"state": "new"` or further along:
+
+```
+gh api repos/<owner>/<repo>/pages --jq .https_certificate
+```
+
+If it's still missing after the PUT above, DNS likely isn't propagated
+yet -- verify with `dig +short CNAME <your-domain>` before retrying.
+Confirmed in practice: a correctly-issued cert reaches `"state":
+"approved"` within about 20 seconds of a successful domain-set.
 
 ## 4. Deploy key and systemd units
 
