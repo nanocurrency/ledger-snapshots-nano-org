@@ -1,0 +1,31 @@
+# Live nano_node daemon. Copy to /etc/systemd/system/<your-service-name>.service
+# and edit the marked lines to match your config.py before installing --
+# NODE_SERVICE_NAME in config.py must match whatever you name this unit.
+
+[Unit]
+Description=Nano Live Network Daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=nanocurrency
+# EDIT: match config.py's BASE_DIR/Nano
+WorkingDirectory=/var/nanocurrency/Nano
+EnvironmentFile=-/etc/default/nanocurrency
+# EDIT: match config.py's BASE_DIR/Nano
+ExecStart=/usr/bin/nano_node --daemon $NANO_EXTRA_FLAGS --data_path=/var/nanocurrency/Nano
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=120
+LimitNOFILE=65535
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+# EDIT: match config.py's BASE_DIR/Nano
+ReadWritePaths=/var/nanocurrency/Nano
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,31 @@
+# qbittorrent-nox seeding daemon. Copy to /etc/systemd/system/qbittorrent-nox.service
+# and edit the marked lines to match your config.py before installing.
+#
+# After first start, set WebUI\Address=127.0.0.1 and WebUI\LocalHostAuth=false
+# in qBittorrent.conf (see INSTALL.md step 5) -- snapshot.py talks to this
+# API purely locally, so it has no reason to be reachable off-box, and a
+# loopback-only bind removes the need for a WebUI password entirely.
+
+[Unit]
+Description=qBittorrent-nox seeding daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=qbtuser
+ExecStart=/usr/bin/qbittorrent-nox --webui-port=8080 --torrenting-port=51413 --confirm-legal-notice
+Restart=on-failure
+RestartSec=5
+# EDIT: match config.py's SEED_DIR
+WorkingDirectory=/var/nanocurrency/torrents
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+# EDIT: match config.py's SEED_DIR, plus a writable dir for qbittorrent's
+# own state (session data, torrent metadata -- not part of config.py)
+ReadWritePaths=/var/nanocurrency/torrents /var/nanocurrency/qbittorrent
+
+[Install]
+WantedBy=multi-user.target
