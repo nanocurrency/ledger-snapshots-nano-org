@@ -1,7 +1,19 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-07-02T20:12:57Z",
+  "updated_utc": "2026-07-03T00:03:16Z",
   "snapshots": [
+    {
+      "name": "Nano_64_2026_07_02_23.7z",
+      "created_utc": "2026-07-03T00:03:16Z",
+      "block_count": "Block count: 2676501",
+      "cemented_block_count": "Cemented block count: 2676297",
+      "size_bytes": 689792451,
+      "sha256": "C4131B5F03D7A9A4265DD5C4DCBB250E622F12BBD951B8A55E3FBCD91CDB962D",
+      "sha3_512": "D1D3F1D0022808212DB0EEF7EA8314891093C46D95859D6BB9C65382B873ABB38F5A9485D3A2603B699B5E2970EE0C614B7E737EDC0B2140C206242AAD0CE3E9",
+      "blake2b_512": "8D4E91DEA263041A3CE62F64D8209914DBA0D5AEF8D439F96007A1716C02A4527DD7BC8E12B563CA8A9A406824213C26F549FEFA9F87F00408B1CC5ED8F383C7",
+      "torrent_url": "Nano_64_2026_07_02_23.7z.torrent",
+      "magnet": "magnet:?xt=urn:btih:c933bea84c6fff626c88f720cae37151abf90497&dn=Nano_64_2026_07_02_23.7z&tr=udp%3A//tracker.opentrackr.org%3A1337/announce&tr=udp%3A//tracker.openbittorrent.com%3A6969/announce"
+    },
     {
       "name": "Nano_64_2026_07_02_20.7z",
       "created_utc": "2026-07-02T20:12:57Z",
@@ -13,18 +25,6 @@
       "blake2b_512": "1375A738440C6DCF779D20A1BA832CC69F07B724D00BD3D6E89D6A83929345855AF5763318F3E8699B7DD71A7751A7E0B53F1626C035D6951C19C68E16D94F07",
       "torrent_url": "Nano_64_2026_07_02_20.7z.torrent",
       "magnet": "magnet:?xt=urn:btih:dc91aea0e4237c76c8c390e9ab38c23a9a349610&dn=Nano_64_2026_07_02_20.7z&tr=udp%3A//tracker.opentrackr.org%3A1337/announce&tr=udp%3A//tracker.openbittorrent.com%3A6969/announce"
-    },
-    {
-      "name": "Nano_64_TEST_3.7z",
-      "created_utc": "2026-07-01T22:20:25Z",
-      "block_count": 1003,
-      "cemented_block_count": 1002,
-      "size_bytes": 5000003,
-      "sha256": "SHA256_3",
-      "sha3_512": "SHA3_3",
-      "blake2b_512": "BLAKE2_3",
-      "torrent_url": "Nano_64_TEST_3.7z.torrent",
-      "magnet": "magnet:?xt=urn:btih:deadbeef00000000000000000000000000000003&dn=Nano_64_TEST_3.7z&tr=udp%3A//tracker.opentrackr.org%3A1337/announce&tr=udp%3A//tracker.openbittorrent.com%3A6969/announce"
     }
   ]
 }
